@@ -1,4 +1,5 @@
 Gerenciador de Livros
+
 Este é um projeto desenvolvido em Django que permite o gerenciamento de livros pessoais. A aplicação utiliza Bootstrap 5.3 para uma interface moderna e responsiva.
 
 Funcionalidades
@@ -32,14 +33,17 @@ bash
 Copy code
 pip install -r requirements.txt
 4. Configurar o Banco de Dados
+
 Crie as migrações:
 bash
 Copy code
 python manage.py makemigrations
+
 Aplique as migrações:
 bash
 Copy code
 python manage.py migrate
+
 5. Iniciar o Servidor
 bash
 Copy code
@@ -53,35 +57,11 @@ Para cada livro listado:
 Editar: Clique no botão "Editar" para alterar as informações do livro.
 Excluir: Clique no botão "Excluir" para removê-lo.
 Marcar como lido/não lido: Use o botão correspondente para atualizar o status de leitura.
-Estrutura do Projeto
-plaintext
-Copy code
-gerenciador-livros/
-│
-├── library_project/
-│   ├── settings.py        # Configurações principais do Django
-│   ├── urls.py            # URLs do projeto
-│   └── ...
-│
-├── books/
-│   ├── models.py          # Modelo Book
-│   ├── views.py           # Views do CRUD
-│   ├── forms.py           # Formulários do CRUD
-│   ├── urls.py            # URLs específicas do app books
-│   └── templates/
-│       └── books/         # Templates HTML com Bootstrap
-│           ├── base.html
-│           ├── book_list.html
-│           ├── book_form.html
-│           ├── book_confirm_delete.html
-│           └── ...
-│
-├── requirements.txt        # Dependências do projeto
-├── manage.py               # Gerenciador do Django
-└── README.md               # Documentação do projeto
+
 Futuras Melhorias
 Adicionar filtros para listar apenas livros lidos ou não lidos.
 Implementar paginação para grandes listas de livros.
 Permitir upload de imagens para cada livro.
+
 Licença
 Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para mais detalhes.
