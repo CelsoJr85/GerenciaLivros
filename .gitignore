@@ -1,0 +1,60 @@
+# Sistema operacional
+*.DS_Store
+*.swp
+*.swo
+Thumbs.db
+ehthumbs.db
+
+# Ambiente virtual
+venv/
+.env
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Configuração do editor
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+logs/
+
+# Banco de dados local
+db.sqlite3
+
+# Arquivos estáticos gerados
+staticfiles/
+media/
+
+# Arquivos de migração
+*.pyc
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Configurações sensíveis
+.env
+
+# Arquivos do Pytest
+htmlcov/
+*.cover
+.cache
+.nox
+.tox
+.pytest_cache/
+.coverage
+.coverage.*
+
+# Arquivos de pacotes
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+pip-log.txt
+
+# Arquivos de compilação do Python
+*.py[cod]

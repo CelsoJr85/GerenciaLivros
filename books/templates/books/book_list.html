@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="mb-4">Meus Livros</h1>
+<a href="{% url 'book_create' %}" class="btn btn-primary mb-3">Adicionar Livro</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>
+                {% if book.read %}
+                <span class="badge bg-success">Lido</span> ({{ book.date_read }})
+                {% else %}
+                <span class="badge bg-secondary">Não Lido</span>
+                {% endif %}
+            </td>
+            <td>
+                <a href="{% url 'book_update' book.pk %}" class="btn btn-sm btn-warning">Editar</a>
+                <a href="{% url 'book_delete' book.pk %}" class="btn btn-sm btn-danger">Excluir</a>
+                <a href="{% url 'toggle_read_status' book.pk %}" class="btn btn-sm btn-info">
+                    {% if book.read %}Marcar como Não Lido{% else %}Marcar como Lido{% endif %}
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
